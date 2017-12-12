@@ -1,0 +1,73 @@
+﻿.mani-container
+        {
+            position: relative;
+        }
+        .mani-left-container
+        {
+            position: absolute;
+            top: 130px;
+            left: 10%;
+            right: 10%;
+        }
+        .mani-title
+        {
+            padding: 10px;
+            color: #7fa03c;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .mani-content p
+        {
+            text-align: justify;
+            color: darkslategrey;
+            font-size: 16px;
+            margin: 30px auto;
+        }
+        .mani-btn
+        {
+            color: #7fa03c;
+            font-size: 22px;
+            text-transform: uppercase;
+            padding: 5px;
+            border: 3px solid;
+            margin: 30px auto;
+        }
+        .mani-right-container
+        {
+            padding: 0;
+        }
+        .mani-right-container img
+        {
+            width: 100%;
+            height: 100vh;
+        }
+         @media (max-width:768px)
+        {
+            .mani-left-container
+            {
+                top: 30%;
+            }
+        }
+        @media (max-width:500px)
+        {
+            .mani-left-container
+            {
+                top: 30%;
+            }
+            h2
+            {
+                font-size: 20px;
+            }
+            .mani-btn
+            {
+                font-size: 18px;
+            }
+            .mani-right-container img
+            {
+                height: 180px;
+            }
+            .mani-content p, .mani-btn
+            {
+                margin: 20px auto;
+            }
+        }

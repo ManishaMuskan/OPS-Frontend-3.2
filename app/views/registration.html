@@ -1,0 +1,140 @@
+<style type="text/css">
+  body {
+    background: #E8E8E8;
+  }
+
+  .templatemo-login-widget {
+    max-width: 100%;
+    width: auto;
+    padding: 30px;
+  }
+
+  .templatemo-login-form .form-group {
+    padding: 0;
+    margin: 5px auto;
+  }
+
+  label.error {
+    color: red;
+    font-size: x-small;
+    display: table-caption;
+    margin-bottom: 2px;
+  }
+</style>
+<form method="post">
+  <div class="container">
+    <div class="templatemo-content-widget templatemo-login-widget white-bg" style="margin-top: 70px;">
+      <header class="text-center">
+        <div class="square"></div><span style="font-weight: bold; color: #13895F;"> Register Yourself</span>
+      </header>
+      <div class="templatemo-login-form">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-user fa-fw"></i>
+                </div>
+                <input name="txt_u_f_name" type="text" id="txt_u_f_name" class="form-control" placeholder="Enter Your First Name" />
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-user fa-fw"></i>
+                </div>
+                <input name="txt_u_l_name" type="text" id="txt_u_l_name" class="form-control" placeholder="Enter Your Last Name" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-suitcase fa-fw"></i>
+                </div>
+                <input name="txt_occup" type="text" id="txt_occup" class="form-control" placeholder="Your Occupation" />
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-globe fa-fw"></i>
+                </div>
+                <input name="txt_country" type="text" id="txt_country" class="form-control" placeholder="Enter Your Country Name" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-phone fa-fw"></i>
+                </div>
+                <input name="txt_contact" type="text" id="txt_contact" class="form-control" placeholder="Enter Your Mobile" />
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-envelope fa-fw"></i>
+                </div>
+                <input name="txt_email" type="text" id="txt_email" class="form-control" placeholder="Enter Your Mail" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-user fa-fw"></i>
+                </div>
+                <input name="txt_user_name" type="text" id="txt_user_name" class="form-control" placeholder="Enter Your User Name" />
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-key fa-fw"></i>
+                </div>
+                <input name="txt_pwd" type="password" id="txt_pwd" class="form-control" placeholder="Enter Your Password" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:30px;">
+          <div class=" col-sm-offset-5 col-sm-2">
+            <div class="form-group">
+              <input type="submit" name="btn_register" value="Register" id="btn_register" class="templatemo-blue-button" ng-click="registration.register();" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="templatemo-content-widget templatemo-login-widget templatemo-register-widget white-bg">
+      <p>
+        Already has an account? <strong><a ng-href="#!login" class="blue-text">Login!</a></strong></p>
+      <p class="go-to-home">
+        <a ng-href="/">Back to <span><i class="fa fa-home fa-fw"></i></span></a></p>
+    </div>
+  </div>
+</form>

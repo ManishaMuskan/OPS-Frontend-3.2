@@ -1,0 +1,231 @@
+body {
+  background: #525659;
+}
+
+p {
+  margin: 5px auto;
+}
+
+.mani-form-body {
+  background: white;
+  width: 100%;
+  margin: 50px auto;
+  padding: 35px 20px;
+  box-shadow: 0px 2px 9px 2px black;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.border-1-black {
+  border: 1px solid black;
+}
+
+.form-horizontal .form-group {
+  margin: 0;
+  display: flex;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 5px 15px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #64c3ce;
+  /* background-color: #fff; */
+  /* background-image: none; */
+  border: 1px solid #333;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control:focus {
+  border-color: black;
+}
+
+.mani-intro-left {
+  margin-top: 5px;
+}
+
+.mani-intro-right {
+  margin-top: 0;
+}
+
+.mani-intro-left p {
+  text-align: left;
+  font-size: 12px;
+  line-height: 10px;
+}
+
+.mani-intro-right p {
+  text-align: right;
+  font-size: 10px;
+  line-height: 8px;
+}
+
+/*Intro Form*/
+
+.mani-intro-col {
+  padding: 0;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mani-intro-heading {
+  display: table-cell;
+  width: auto;
+  vertical-align: middle;
+}
+
+.mani-intro-heading p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.row .mani-intro-info-col {
+  border-left: 2px solid black;
+}
+
+.mani-intro-info-col {
+  padding: 0;
+}
+
+.form-horizontal .control-label {
+  text-align: left;
+}
+
+.us-patent-row {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 100%;
+}
+
+.mani-us-patent-flex-item-con {
+  border: 1px solid black;
+  padding: 0;
+}
+
+.mani-us-patent-flex-item-con .mani-td-title {
+  padding: 20px 10px;
+  border-bottom: 2px solid black;
+  height: 65px;
+}
+
+.mani-us-patent-flex-item-con .mani-td-txtbox {
+  padding: 0;
+}
+
+.mani-us-patent-flex-item-con .mani-td-txtbox .form-control {
+  padding: 30px 10px;
+  border: none;
+}
+
+.mani-us-patent-flex-item-con .mani-td-title .control-label, .mani-us-patent-flex-item-con .mani-td-txtbox .control-label {
+  font-stretch: condensed;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+.mani-us-patent-flex-item-con .long-text {
+  padding: 10px 10px;
+}
+
+.bottom-heading {
+  border-top: 0px;
+}
+
+/*Mobile Styles*/
+
+@media screen and (max-width:500px) {
+  .mani-intro-left, .mani-intro-right {
+    position: relative;
+    margin: 2px auto;
+  }
+  .mani-intro-left {
+    margin: 0 auto 20px auto;
+  }
+  .mani-intro-left p, .mani-intro-right p {
+    text-align: left;
+    margin: 0 auto 5px auto;
+    padding: 0;
+  }
+  .mani-intro-left p, .mani-intro-right p {
+    line-height: 12px;
+  }
+  .mani-intro-col {
+    margin: auto;
+  }
+  .row .mani-intro-info-col {
+    border: none;
+    border-top: 2px solid black;
+  }
+  .row .mani-intro-col {
+    padding: 5px 0;
+  }
+  .form-horizontal .form-group {
+    display: block;
+  }
+  .us-patent-row {
+    display: block;
+  }
+  .mani-us-patent-flex-item-con .mani-td-title {
+    height: auto;
+    padding: 5px 10px;
+  }
+  .bottom-heading {
+    border-top: 1px solid black;
+  }
+  .mani-us-patent-flex-item-con .mani-td-txtbox .form-control {
+    padding: 3px 10px;
+  }
+}
+
+/* Tablet styles */
+
+@media screen and (min-width:501px) and (max-width:999px) {
+  .mani-intro-left, mani-intro-right {
+    position: relative;
+  }
+  .mani-intro-left p, .mani-intro-right p {
+    text-align: left;
+    margin: 0 auto 5px auto;
+    padding: 0;
+  }
+  .mani-intro-left {
+    margin: 0 auto 20px auto;
+  }
+  .mani-intro-left p, .mani-intro-right p {
+    line-height: 12px;
+  }
+  .form-horizontal .form-group {
+    display: block;
+  }
+  .bottom-heading {
+    border-top: 1px solid black;
+  }
+}
+
+/* iPad Pro Portrait */
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .mani-intro-col {
+    margin: 10px auto;
+  }
+  .us-patent-row {
+    display: block;
+  }
+}

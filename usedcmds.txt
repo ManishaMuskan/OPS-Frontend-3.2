@@ -1,0 +1,4 @@
+https://www.airpair.com/js/using-angularjs-yeoman - reference
+https://github.com/yeoman/generator-angular
+...................... create route with controller and view ...........................
+  yo angular:route myRoute --uri=my/route

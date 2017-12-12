@@ -1,0 +1,165 @@
+<form method="post">
+  <div class="panel panel-default templatemo-content-widget white-bg no-padding templatemo-overflow-hidden">
+    <div class="panel-heading templatemo-position-relative">
+      <h4 class="text-uppercase">
+                   Patent Search</h4>
+    </div>
+    <div class="panel-body">
+      <fieldset class="mani-fldset">
+        <legend class="mani-lgnd"><span>&nbsp;Fill the Details&nbsp;</span></legend>
+        <div class="form-horizontal">
+          <br />
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <div class="col-md-4     ">
+                  <label for="txt_app_no">
+                                           Application Number
+                                       </label>
+                </div>
+                <div class="col-md-8">
+                  <input name="txt_app_no" type="text" maxlength="8" id="txt_app_no" class="form-control" />
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <div class="col-md-4     ">
+                  <label for="txt_us_pt_no">
+                                           US Patent Number
+                                       </label>
+                </div>
+                <div class="col-md-8">
+                  <input name="txt_us_pt_no" type="text" ng-model="main.patentCode" maxlength="7" id="txt_us_pt_no" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <div class="col-md-4     ">
+                  <label for="txt_flng_date">
+                    Filing Date
+                </label>
+                </div>
+                <div class="col-md-8">
+                  <datepicker date-format="longDate" selector="form-control">
+                    <div class="input-group">
+                      <input name="txt_flng_date" ng-model="date" type="text" id="txt_flng_date" placeholder="Choose a date" class="form-control" style="cursor:pointer;" />
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div>
+                  </datepicker>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <div class="col-md-4     ">
+                  <label for="txt_us_pub_no">
+                                           US Publication Number
+                                       </label>
+                </div>
+                <div class="col-md-8">
+                  <input name="txt_us_pub_no" type="text" id="txt_us_pub_no" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <div class="col-md-4     ">
+                  <label for="txt_frst_nm_invntr">
+                                           First Name Inventor
+                                       </label>
+                </div>
+                <div class="col-md-8">
+                  <input name="txt_frst_nm_invntr" type="text" id="txt_frst_nm_invntr" class="form-control" />
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <div class="col-md-4     ">
+                  <label for="txt_frgn_pt_no">
+                                           Foreign Patent number
+                                       </label>
+                </div>
+                <div class="col-md-8">
+                  <input name="txt_frgn_pt_no" type="text" id="txt_frgn_pt_no" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label for="txt_art_unit">
+                                           Art Unit
+                                       </label>
+                </div>
+                <div class="col-md-8">
+                  <input name="txt_art_unit" type="text" id="txt_art_unit" class="form-control" />
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label for="txt_art_unit">
+                                           NPL (Non-Patent Patent Litrature)
+                                       </label>
+                </div>
+                <div class="col-md-8">
+                  <input name="txt_npl" type="text" id="txt_npl" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label for="txt_ex_nm">
+                                           Examiner Name
+                                       </label>
+                </div>
+                <div class="col-md-8">
+                  <input name="txt_ex_nm" type="text" id="txt_ex_nm" class="form-control" />
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <div class="col-md-4">
+                  <label for="txt_att_doc_nm">
+                                           Attorney Docket Number
+                                       </label>
+                </div>
+                <div class="col-md-8">
+                  <input name="txt_att_doc_nm" type="text" id="txt_att_doc_nm" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="panel-footer">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="pull-right">
+            <a id="btn_reset" class="btn btn-danger">Reset</a>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="pull-left">
+            <button ng-click="main.findPatentInfo(main.patentCode)" class="btn btn-info">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

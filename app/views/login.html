@@ -1,0 +1,40 @@
+<style type="text/css">
+  body{
+    background: #E8E8E8;
+  }
+</style>
+<form method="post">
+<div class="templatemo-content-widget templatemo-login-widget white-bg" style="margin-top: 100px;">
+  <header class="text-center">
+    <div class="square"></div><span style="font-weight: bold; color: #13895F;"> Log In to Your Account - Existing Customer</span>
+  </header>
+  <div class="templatemo-login-form">
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class="	glyphicon glyphicon-user"></i>
+        </div>
+        <input name="txt_u_name" type="text" id="txt_u_name" class="form-control" placeholder="Enter your Email Id or UserName" required="true" ng-model="login.u_name"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class="	glyphicon glyphicon-lock"></i>
+        </div>
+        <input name="txt_pwd" type="password" id="txt_pwd" class="form-control" placeholder="Enter your password" required="true" ng-model="login.u_pwd"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="submit" name="btn_submit" value="Login" id="btn_submit" class="templatemo-blue-button width-100" ng-click="login.login();"/>
+    </div>
+  </div>
+</div>
+</form>
+<div class="templatemo-content-widget templatemo-login-widget templatemo-register-widget white-bg">
+  <p>
+    Not a registered user yet? <strong><a ng-href="#!registration" class="blue-text">Register
+                now!</a></strong></p>
+  <p class="go-to-home">
+    <a ng-href="/">Back to <span><i class="fa fa-home fa-fw "></i></span></a></p>
+</div>
