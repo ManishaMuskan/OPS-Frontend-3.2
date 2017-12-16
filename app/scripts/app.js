@@ -39,7 +39,7 @@ angular
       .when('/verify-uspto-form', {
         templateUrl: 'views/verify-form.html',
         controller: 'VerifyFormCtrl',
-        controllerAs: 'verifyForm'
+        controllerAs: 'vForm'
       })
       .otherwise({
         redirectTo: '/404'

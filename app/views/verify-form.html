@@ -35,7 +35,7 @@
                 <label class="control-label" for="txt_app_no_1">Application Number</label>
               </div>
               <div class="col-sm-7 padding-0">
-                <input name="txt_app_no_1" type="text" id="txt_app_no_1" class="form-control" />
+                <input name="txt_app_no_1" type="text" id="txt_app_no_1" class="form-control" ng-model="vForm.app_no" />
               </div>
             </div>
             <div class="form-group">
@@ -43,7 +43,7 @@
                 <label class="control-label" for="txt_filing_dt_1">Filing Date</label>
               </div>
               <div class="col-sm-7 padding-0">
-                <input name="txt_filing_dt_1" type="text" id="txt_filing_dt_1" class="form-control" />
+                <input name="txt_filing_dt_1" type="text" id="txt_filing_dt_1" class="form-control" ng-model="vForm.fl_date" />
               </div>
             </div>
             <div class="form-group">
@@ -51,7 +51,7 @@
                 <label class="control-label" for="txt_f_name_inventor_1">First Named Inventor</label>
               </div>
               <div class="col-sm-8 padding-0">
-                <input name="txt_f_name_inventor_1" type="text" id="txt_f_name_inventor_1" class="form-control" />
+                <input name="txt_f_name_inventor_1" type="text" id="txt_f_name_inventor_1" class="form-control" ng-model="vForm.f_name_inventor" />
               </div>
             </div>
             <div class="form-group">
@@ -59,7 +59,7 @@
                 <label class="control-label" for="txt_art_unit_1">Art Unit</label>
               </div>
               <div class="col-sm-7 padding-0">
-                <input name="txt_art_unit_1" type="text" id="txt_art_unit_1" class="form-control" />
+                <input name="txt_art_unit_1" type="text" id="txt_art_unit_1" class="form-control" ng-model="vForm.art_unit" />
               </div>
             </div>
             <div class="form-group">
@@ -67,7 +67,7 @@
                 <label class="control-label" for="txt_exam_name_1">Examiner Name</label>
               </div>
               <div class="col-sm-8 padding-0">
-                <input name="txt_exam_name_1" type="text" id="txt_exam_name_1" class="form-control" />
+                <input name="txt_exam_name_1" type="text" id="txt_exam_name_1" class="form-control" ng-model="vForm.exam_name" />
               </div>
             </div>
             <div class="form-group">
@@ -75,7 +75,7 @@
                 <label class="control-label" for="txt_at_doc_no_1">Attorney Docket Number</label>
               </div>
               <div class="col-sm-7 padding-0">
-                <input name="txt_at_doc_no_1" type="text" id="txt_at_doc_no_1" class="form-control" />
+                <input name="txt_at_doc_no_1" type="text" id="txt_at_doc_no_1" class="form-control" ng-model="vForm.at_doc_no" />
               </div>
             </div>
 
@@ -95,7 +95,7 @@
           <div class="mani-us-patent-flex-item-con" style="flex-grow: 1;">
             <div class="mani-td-title">
               <label class="control-label" for="txt_exam_initial_1">
-                                    Examiner Initial<span><sup>*</sup></span>
+                                    <span><sup>*</sup></span>
                                 </label>
             </div>
             <div class="mani-td-txtbox">
@@ -119,7 +119,7 @@
                                 </label>
             </div>
             <div class="mani-td-txtbox">
-              <input name="txt_pt_no_1" type="text" id="txt_pt_no_1" class="form-control" />
+              <input name="txt_pt_no_1" type="text" id="txt_pt_no_1" class="form-control" ng-model="vForm.patentNo" />
             </div>
           </div>
 
@@ -130,7 +130,7 @@
                                 </label>
             </div>
             <div class="mani-td-txtbox">
-              <input name="txt_kind_code_1" type="text" id="txt_kind_code_1" class="form-control" />
+              <input name="txt_kind_code_1" type="text" id="txt_kind_code_1" class="form-control" value="{{vForm.k_code}}" />
             </div>
           </div>
           <div class="mani-us-patent-flex-item-con" style="flex-grow: 2;">
@@ -140,7 +140,7 @@
                                 </label>
             </div>
             <div class="mani-td-txtbox">
-              <input name="txt_issue_date_1" type="text" id="txt_issue_date_1" class="form-control" />
+              <input name="txt_issue_date_1" type="text" id="txt_issue_date_1" class="form-control" ng-model="vForm.issueDate" />
             </div>
           </div>
           <div class="mani-us-patent-flex-item-con" style="flex-grow: 3;">
@@ -150,7 +150,7 @@
                                 </label>
             </div>
             <div class="mani-td-txtbox">
-              <input name="txt_patentee_1" type="text" id="txt_patentee_1" class="form-control" />
+              <input name="txt_patentee_1" type="text" id="txt_patentee_1" class="form-control" ng-model="vForm.inventor" />
             </div>
           </div>
           <div class="mani-us-patent-flex-item-con" style="flex-grow: 3;">

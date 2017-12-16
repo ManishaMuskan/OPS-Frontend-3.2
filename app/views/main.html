@@ -18,7 +18,7 @@
                                        </label>
                 </div>
                 <div class="col-md-8">
-                  <input name="txt_app_no" type="text" maxlength="8" id="txt_app_no" class="form-control" />
+                  <input name="txt_app_no" type="text" maxlength="8" id="txt_app_no" class="form-control" ng-model="main.app_no" />
                 </div>
               </div>
             </div>
@@ -30,7 +30,7 @@
                                        </label>
                 </div>
                 <div class="col-md-8">
-                  <input name="txt_us_pt_no" type="text" ng-model="main.patentCode" maxlength="7" id="txt_us_pt_no" class="form-control" />
+                  <input name="txt_us_pt_no" type="text" ng-model="main.patentCode" maxlength="9" id="txt_us_pt_no" class="form-control" />
                 </div>
               </div>
             </div>
@@ -44,9 +44,9 @@
                 </label>
                 </div>
                 <div class="col-md-8">
-                  <datepicker date-format="longDate" selector="form-control">
+                  <datepicker date-format="yyyy/MM/dd" selector="form-control">
                     <div class="input-group">
-                      <input name="txt_flng_date" ng-model="date" type="text" id="txt_flng_date" placeholder="Choose a date" class="form-control" style="cursor:pointer;" />
+                      <input name="txt_flng_date" ng-model="main.date" type="text" id="txt_flng_date" placeholder="Choose a date" class="form-control" style="cursor:pointer;" />
                       <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                     </div>
                   </datepicker>
@@ -75,7 +75,7 @@
                                        </label>
                 </div>
                 <div class="col-md-8">
-                  <input name="txt_frst_nm_invntr" type="text" id="txt_frst_nm_invntr" class="form-control" />
+                  <input name="txt_frst_nm_invntr" type="text" id="txt_frst_nm_invntr" class="form-control" ng-model="main.f_name_inventor" />
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@
                                        </label>
                 </div>
                 <div class="col-md-8">
-                  <input name="txt_art_unit" type="text" id="txt_art_unit" class="form-control" />
+                  <input name="txt_art_unit" type="text" id="txt_art_unit" class="form-control" ng-model="main.art_unit" />
                 </div>
               </div>
             </div>
@@ -127,7 +127,7 @@
                                        </label>
                 </div>
                 <div class="col-md-8">
-                  <input name="txt_ex_nm" type="text" id="txt_ex_nm" class="form-control" />
+                  <input name="txt_ex_nm" type="text" id="txt_ex_nm" class="form-control" ng-model="main.exam_name" />
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@
                                        </label>
                 </div>
                 <div class="col-md-8">
-                  <input name="txt_att_doc_nm" type="text" id="txt_att_doc_nm" class="form-control" />
+                  <input name="txt_att_doc_nm" type="text" id="txt_att_doc_nm" class="form-control" ng-model="main.at_doc_no" />
                 </div>
               </div>
             </div>
@@ -156,7 +156,7 @@
         </div>
         <div class="col-xs-6">
           <div class="pull-left">
-            <button ng-click="main.findPatentInfo3_2()" class="btn btn-info">Submit v-3.2</button>
+            <button ng-click="main.findPatentInfo3_2(main.app_no, main.date, main.f_name_inventor, main.art_unit, main.exam_name, main.at_doc_no)" class="btn btn-info">Submit v-3.2</button>
           </div>
         </div>
       </div>

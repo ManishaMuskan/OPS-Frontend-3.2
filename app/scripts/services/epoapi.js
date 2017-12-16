@@ -18,15 +18,23 @@ angular.module('yoemanIdsApp')
     this.getData = function(endpoint) {
       $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded;charset=utf-8";
       var curTime = Date.now();
-      var authorized = false;
-      var myCookieArray = {};
-      myCookieArray = $cookieStore.get("myCookieArray");
-      if (myCookieArray != undefined) {
-        if (curTime < myCookieArray.expired) {
-          authorized = true;
+      var isAuthorized = false;
+      var metaAccTokenArray = {};
+      metaAccTokenArray = $cookieStore.get("metaAccTokenArray");
+      if (metaAccTokenArray != undefined) {
+        if (curTime < metaAccTokenArray.expired) {
+          isAuthorized = true;
         }
       }
-      if (!authorized) {
+      if (isAuthorized) {
+        return $http({
+          url: data_url + endpoint,
+          method: "GET",
+          headers: {
+            'Authorization': 'Bearer ' + metaAccTokenArray.acc_token
+          }
+        })
+      } else {
         $http({
           url: authUrl,
           method: "POST",
@@ -37,30 +45,22 @@ angular.module('yoemanIdsApp')
             grant_type: 'client_credentials'
           })
         }).then(function(response) {
-          myCookieArray = {
+          metaAccTokenArray = {
             'acc_token': response.data.access_token,
             'expired': Date.now() + 1080000
           };
-          $cookieStore.put('myCookieArray', myCookieArray);
-          authorized = true;
-          if (authorized) {
+          $cookieStore.put('metaAccTokenArray', metaAccTokenArray);
+          isAuthorized = true;
+          if (isAuthorized) {
             return $http({
               url: data_url + endpoint,
               method: "GET",
               headers: {
-                'Authorization': 'Bearer ' + myCookieArray.acc_Token
+                'Authorization': 'Bearer ' + metaAccTokenArray.acc_token
               }
             })
           }
         });
-      } else {
-        return $http({
-          url: data_url + endpoint,
-          method: "GET",
-          headers: {
-            'Authorization': 'Bearer ' + myCookieArray.acc_Token
-          }
-        })
       }
     }
   });
