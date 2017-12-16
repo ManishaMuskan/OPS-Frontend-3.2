@@ -150,7 +150,7 @@
                                 </label>
             </div>
             <div class="mani-td-txtbox">
-              <input name="txt_patentee_1" type="text" id="txt_patentee_1" class="form-control" ng-model="vForm.inventor" />
+              <input name="txt_patentee_1" type="text" id="txt_patentee_1" class="form-control" ng-model=" vForm.inventorsNames" />
             </div>
           </div>
           <div class="mani-us-patent-flex-item-con" style="flex-grow: 3;">
@@ -485,7 +485,7 @@
   </div>
   <div class="row" style="margin-bottom:30px;">
     <div class="col-sm-offset-5 col-sm-2">
-      <input type="submit" name="btn_verified" value="Download Pdf" id="btn_verified" class="btn btn-info" />
+      <input ng-click="vForm.download()" name="btn_verified" value="Download Pdf" id="btn_verified" class="btn btn-info" />
     </div>
   </div>
 </form>

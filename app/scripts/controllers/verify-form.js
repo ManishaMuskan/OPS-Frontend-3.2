@@ -8,7 +8,7 @@
  * Controller of the yoemanIdsApp
  */
 angular.module('yoemanIdsApp')
-  .controller('VerifyFormCtrl', function($scope, $cookieStore, $cookies, $http, epoApi, FormDataService) {
+  .controller('VerifyFormCtrl', function($scope, $cookieStore, $cookies, $http, epoApi, FormDataService, $filter) {
     var vm = this;
     this.pt_no = $cookies.get('pt_no');
     $scope.$watch(function() {
@@ -33,18 +33,36 @@ angular.module('yoemanIdsApp')
 
         vm.issueDate = response.data['ops:world-patent-data']['exchange-documents']['exchange-document']['bibliographic-data']['publication-reference']['document-id'][0]['date']['$'];
 
-        vm.applicant = response.data['ops:world-patent-data']['exchange-documents']['exchange-document']['bibliographic-data']['parties']['applicants']['applicant'][0]['applicant-name']['name']['$'];
+        vm.applicants = response.data['ops:world-patent-data']['exchange-documents']['exchange-document']['bibliographic-data']['parties']['applicants']['applicant']; //[0]['applicant-name']['name']['$'];
 
-        vm.inventor = response.data['ops:world-patent-data']['exchange-documents']['exchange-document']['bibliographic-data']['parties']['inventors']['inventor'][0]['inventor-name']['name']['$']
+        vm.inventors = response.data['ops:world-patent-data']['exchange-documents']['exchange-document']['bibliographic-data']['parties']['inventors']['inventor'];
+        // eg: $filter('filter')(array, expression, comparator, anyPropertyKey)
+
+        vm.inventors = $filter('filter')(vm.inventors, {
+          "@data-format": "epodoc"
+        });
+        vm.inventorsNames = "";
+        vm.inventors.forEach(function(inventor) {
+          console.log(inventor['inventor-name']['name']['$']);
+          //vm.inventorsNames += element['inventor-name']['name']['$'] + ", ";
+        });
+
+        //['inventor'][0]['inventor-name']['name']['$']
 
         vm.k_code = response.data['ops:world-patent-data']['exchange-documents']['exchange-document']['@kind'];
 
         vm.c_code = response.data['ops:world-patent-data']['exchange-documents']['exchange-document']['@country'];
-        console.log("pt no: " + vm.patentNo);
-        console.log("kind code : " + vm.k_code);
-        console.log("inventors : " + vm.inventor);
-        console.log("c_code : " + vm.c_code);
-        console.log("applicants : " + vm.applicant);
+        console.log("applicants");
+        console.log(vm.applicants);
+        console.log("Investors");
+        console.log(vm.inventors);
       }
     });
+
+
+
+    vm.download = function() {
+      window.print();
+    }
+
   });

@@ -9,7 +9,7 @@ angular.module('yoemanIdsApp')
       'http://ops.epo.org/**'
     ]);
   })
-  .service('epoApi', function($cookieStore, $http) {
+  .service('epoApi', function($cookieStore, $http, $httpParamSerializer) {
     //var pt_no = $cookies.get('pt_no');
     var data_url = 'https://ops.epo.org/3.2/rest-services/published-data/';
     var cred = "TW9RbkZucm02NWM0ZUZpVzRBaFIwSkZ4a0YwalVwUHE6R3RRYUNPS3dWRWROSmx2QQ==";
@@ -35,13 +35,13 @@ angular.module('yoemanIdsApp')
           }
         })
       } else {
-        $http({
+        return $http({
           url: authUrl,
           method: "POST",
           headers: {
             'Authorization': 'Basic ' + cred
           },
-          data: $.param({
+          data: $httpParamSerializer({
             grant_type: 'client_credentials'
           })
         }).then(function(response) {
